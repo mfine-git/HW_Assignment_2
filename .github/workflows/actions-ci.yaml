@@ -3,6 +3,8 @@ on:
   push:
     branches:
       - main
+    tags:
+      - 'v*'
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -23,5 +25,6 @@ jobs:
           file: ./app/Dockerfile
           push: true
           tags: ${{ secrets.DOCKER_HUB_USERNAME }}/flask-image:latest
-
+          cache-from: type=registry,ref=${{ secrets.DOCKER_HUB_USERNAME }}/flask-image:buildcache
+          cache-to: type=registry,ref=${{ secrets.DOCKER_HUB_USERNAME }}/flask-image:buildcache,mode=max
 
