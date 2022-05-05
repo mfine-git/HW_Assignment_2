@@ -22,6 +22,6 @@ jobs:
           context: ./app
           file: ./app/Dockerfile
 #          push: true
-           push: false
+          push: false
 #          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/flask-image:latest
           tags: maxim/flask-image:latest
