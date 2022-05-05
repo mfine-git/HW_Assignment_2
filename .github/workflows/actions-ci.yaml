@@ -24,4 +24,4 @@ jobs:
 #          push: true
            push: false
 #          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/flask-image:latest
-          tags: $maxim/flask-image:latest
+          tags: maxim/flask-image:latest
