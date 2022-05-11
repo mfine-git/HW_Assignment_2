@@ -1,0 +1,26 @@
+# Ignore everything
+*
+
+# But not these files...
+!.gitignore
+!README.md
+!server.py
+!requirements.txt
+!flask.cpython-38.pyc
+!.dockerignore
+!Dockerfile
+!actions-ci.yaml
+!deployment-manifest.yaml
+!service-manifest.yaml
+!test-connection.yaml
+!_helpers.tpl
+!NOTES.txt
+!.helmignore
+!Chart.yaml
+!values.yaml
+
+# ...even if they are in subdirectories
+!*/
+
+# if the files to be tracked are in subdirectories
+#!*/a/b/file1.txt

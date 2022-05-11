@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: "{{ include "flask-chart.fullname" . }}-test-connection"
+  labels:
+    app: curl
+  annotations:
+    "helm.sh/hook": test
+spec:
+  containers:
+    - name: curl
+      image: radial/busyboxplus:curl
+      command: ['curl']
+      args: ["http://flask", "8080"]
+  restartPolicy: Never

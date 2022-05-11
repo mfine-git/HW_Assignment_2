@@ -1,5 +1,5 @@
 from flask import Flask
-from flask import request, Response
+# from flask import request, Response
 import sys
 
 app = Flask(__name__)
@@ -8,7 +8,7 @@ port = sys.argv[1]
 
 @app.route("/")
 def home():
-    return '<h1>Hello from Flask !</h2>'
+    return '<h1>Hello from Flask!</h2>'
 
 
 if __name__ == "__main__":
